@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex items-center justify-center p-4">
+    <main class="w-full max-w-md bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-100 p-8 sm:p-12 text-center transition-all duration-300 hover:shadow-2xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 text-xs font-medium mb-6">
+            <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+            Webseite bereit
+        </div>
+        
+        <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900 mb-3">
+            Hello World
+        </h1>
+        
+        <p class="text-slate-500 text-base leading-relaxed mb-8">
+            Willkommen auf deiner neuen, sauber gestalteten Minimalist-Webseite.
+        </p>
+
+        <button 
+            onclick="toggleGreeting()"
+            class="w-full py-3 px-6 rounded-xl bg-indigo-600 hover:bg-indigo-700 active:scale-[0.98] text-white font-medium shadow-md shadow-indigo-200 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+            Grüße zurück! 👋
+        </button>
+
+        <p id="response-msg" class="mt-4 text-sm text-indigo-600 font-medium h-5 transition-opacity duration-300 opacity-0">
+            Hallo! Schön, dass du da bist.
+        </p>
+    </main>
+
+    <script>
+        function toggleGreeting() {
+            const msg = document.getElementById('response-msg');
+            msg.classList.toggle('opacity-0');
+        }
+    </script>
+</body>
+</html>
